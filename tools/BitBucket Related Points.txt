@@ -1,0 +1,346 @@
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------
+MasterBranch<-->YourBranch<-->localMachine
+
+
+1. create PR from master to kamal/your branch in bitbucket.
+	(Assume no conflicts while raising PR-Pull Request)
+	(Master--> Kamal-angular-practice-code)
+2. go to local there take pull request, all github(Kamal/Your branch )
+   changes will come to local machine(If no conflicts between local data
+   and Kamal/PersonalBranch).
+   Kamal-angular-practice-code--> Local machine
+3. Now do modifications commit,push, raise PR to master.
+
+------------------------------------------------------------------------
+1. create PR from master to kamal/your branch in bitbucket.
+	(Assume no conflicts while raising PR-Pull Request)
+	Master--> Kamal-angular-practice-code
+2. go to local there take pull request,
+   If ther are conflicts between local data and Kamal/PersonalBranch).
+   Kamal-angular-practice-code--> Local machine
+3. go to your local code.
+	git commit (existing changes anything are there)
+	git push (it will fail dont worry.)
+	git pull (Now both changes appear in local machine)
+   Now do the modifications accordingly/ remove conflicts manually.
+   git commit
+   git push
+   raise PR to master.
+---------------
+3rd Scenario:
+While raising PR from master to kamal_Branch(feature Branch)
+ assume if we got conflicts.
+If you try to approve and merge, merge will fail.
+(Master--> Kamal-angular-practice-code)
+Then,Goto cmd line/git bash.
+
+git checkout master(from branch)
+git pull
+git checkout ourBranch/Kamal_Branch(to branch)
+git merge master (means merge from master to ourBranch)
+Now both changes will be there in Local,remove conflicts manaullay,
+change code accordingly.
+Git commit
+git push
+if you go and check bitbucket PR will be merged/ if not merge again.
+-------------------
+your changes you staged,committed and when trying to push it is telling
+conflits,
+How to resolve this ??
+-------------------
+changes added to index(staging), but i want revert the staged changes.
+	
+	git reset HEAD   --> To unstage all the staged file use command.
+	git reset HEAD app.js  --> To unstage a single file staged file (example: app.js) use command.
+	
+	git restore --staged <file> --> With Git version 2.23.0 a new command "git restore" was introduced. To unstage the staged  
+	                                 file use:
+	git restore --staged *   --> to restore all staged files.
+	
+	
+------------
+changes staged and committed to local Repo,not pushed, but i want revert the committed changes.
+	1. To revert the latest commit and discard changes in the committed file do:
+	   Undo the commit and completely remove all changes
+		git reset --hard HEAD~1
+		(OR)
+		git log --> get the commit id by this command.
+		git reset --hard <Commit ID>
+			git reset --hard d857bdf90b6defc920913b4448166178c96496f3
+
+	2. To revert the latest commit but retain the local changes (on disk) do:
+	   Undo commit and keep all files staged
+		git reset --soft HEAD~1
+	3. Undo commit and unstage all files: 
+		git reset HEAD~	
+		
+	Once after executing above command commited files will be moved to staging, now we need to use "restore" to revert staging also.	
+------------
+changes committed to local Repo, changes pushed to server Repo, but i want revert the pushed changes.
+
+------------
+how to see the diffrence between files from local repo to remote repo.
+	$ git diff fileNAme with path.
+------------
+how to repalce local repo code with previos commit version code.
+------------
+Code comparision between previous commits.
+-----------
+how to check commit history.
+------------
+How to discard all my changes in project from local folder.
+	git checkout .
+	
+
+------------..
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+With eclipse:
+
+Early morning after reaching office ,after open system. project take pull request.
+
+1. Eclipse--> project right click--> teams--> pull--> if conflicts.
+2. with conflicts commit your files, dont use push only commit. next go to java perspective.
+3. pull the changes again. Now repo changes and your local changes will mixed. with >>>, === symbols.
+4. modify/remove conflict code, remove >> and === sysmbols, make code compile with valid code.
+5. now commit and push. Code will be merged.
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+------------
+
+
+
+
+
+
+
+
+
+
+
+
