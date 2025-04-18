@@ -1,9 +1,10 @@
 p { 
-    background-color: darkred;
+    background-color: green;
     width: 550px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 150px;
     font-size: 100px;
+    color: tomato;
 }
 
 
