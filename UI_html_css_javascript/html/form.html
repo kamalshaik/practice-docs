@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>HTML Forms</h2>
+
+    <form action="http://localhost:9000/employees" method="POST">
+        <label for="fname">Employee Id:</label><br>
+        <input type="text" id="empId" name="empId"><br>
+        <label for="lname">Employee Name:</label><br>
+        <input type="text" id="empName" name="empName"><br><br>
+
+        <label for="empDOJ">DOJ:</label><br>
+        <input type="date" id="empDOJ" name="empDOJ"><br>
+        <label for="empSalary">Employee Salary:</label><br>
+        <input type="text" id="empSalary" name="empSalary"><br><br>
+
+        <label for="isPermenentEmp">Permanent Employee ? :</label><br>
+        <input type="text" id="isPermenentEmp" name="isPermenentEmp"><br><br>
+
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+
+</html>
