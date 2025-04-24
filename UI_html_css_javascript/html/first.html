@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html>
 
-<body>
-
+<head>
     <style>
-        body {
-            background-image: url('tux.gif');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td,
+        th {
+            border: 1px solid #10cf93;
+            text-align: left;
         }
     </style>
-
-
-
-    <p>
-        You can specify background images<br>
-        for any visible HTML element.<br>
-        In this example, the background image<br>
-        is specified for a p element.<br>
-        By default, the background-image<br>
-        will repeat itself in the direction(s)<br>
-        where it is smaller than the element<br>
-        where it is specified. (Try resizing the<br>
-        browser window to see how the<br>
-        background image behaves.
-    </p>
-
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>age</th>
+            <th>Cell</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Azad</td>
+            <td>21</td>
+            <td>343434</td>
+            <td>MVG</td>
+        </tr>
+         
+    </table>
 </body>
-
 </html>
