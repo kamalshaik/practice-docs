@@ -1,0 +1,23 @@
+task hello {
+  doLast {
+   
+   
+  
+   String expString = 'TUTORIALS point'
+   println "Original: " + expString
+   println "Upper case: " + expString.toUpperCase()
+ 
+  4.times { 
+    print "$it " 
+   }
+   
+   
+   String myName = "Marc";
+   myName.each() { 
+    println "${it}" 
+   };
+
+
+  }
+}
+// https://www.tutorialspoint.com/gradle/gradle_tasks.htm
