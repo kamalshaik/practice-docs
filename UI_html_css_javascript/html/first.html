@@ -4,23 +4,27 @@
 <head>
   <title>Javascript</title>
 </head>
-
-<link rel="stylesheet" href="test.css" />
+<style>
+</style>
 
 <body>
-  <form>
-    <input type="text" placeholder="Enter user name" onmouseover="console.log('Pleae enter user name')" /><br>
-    <input type="password" placeholder="Enter password" onclick="console.log('Pleae enter password')" /><br>
-    Select country: <select>
+  <form action="#">
+    Enter Name: <input type="text" id="uName" class="abcClass" style="color: red;" value="Kamal"/><br>
+    Enter password: <input type="password" id="pwd"><br>
+    Select country: <select id="country">
       <option>India</option>
       <option>US</option>
       <option>UK</option>
     </select>
     <br>
-    <input type="submit" value="Login"><br>
+    <input type="submit" value="Login" onclick="test1();"><br>
   </form>
 
-
+  <script>
+    function test1() {
+      console.log(document.getElementById('uName'));
+    }
+  </script>
 </body>
 
 </html>
