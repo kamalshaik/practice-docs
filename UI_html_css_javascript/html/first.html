@@ -2,29 +2,54 @@
 <html>
 
 <head>
-  <title>Javascript</title>
+
 </head>
 <style>
+
 </style>
+<script>
+  function validateInpuData() {
+    document.getElementById('uName').disabled = false;
+    document.getElementById('pwd').disabled = true;
+    document.getElementById('male').disabled = true;
+    document.getElementById('fMale').disabled = true;
+    document.getElementById('country').disabled = true;
+    document.getElementById('sbmt').disabled = true;
+
+    document.getElementById('fMale').checked = true;
+    document.getElementById('eng').checked = true;
+    document.getElementById('tel').checked = true;
+    document.getElementById('tml').checked = true;
+
+    document.getElementById('eng').disabled = true;
+    document.getElementById('tel').disabled = true;
+    document.getElementById('tml').disabled = true;
+  }
+
+</script>
 
 <body>
+
   <form action="#">
-    Enter Name: <input type="text" id="uName" class="abcClass" style="color: red;" value="Kamal"/><br>
-    Enter password: <input type="password" id="pwd"><br>
-    Select country: <select id="country">
-      <option>India</option>
+    Enter user Name: <input type="text" id="uName" style="color: red;" value="Kamal" disabled="true"/> <br>
+    password : <input type="password" id="pwd" value="abc123" /> <br>
+    Gender : Male : <input type="radio" name="gender" id="male" />
+    Female : <input type="radio" name="gender" id="fMale" /><br>
+    Select Country:
+    <select id="country">
+      <option>Select</option>
       <option>US</option>
-      <option>UK</option>
+      <option selected="true">India</option>
+      <option>Aus</option>
     </select>
     <br>
-    <input type="submit" value="Login" onclick="test1();"><br>
+    Select languages:
+    English: <input type="checkbox" id="eng" />
+    Telugu: <input type="checkbox" id="tel" />
+    Tamil: <input type="checkbox" id="tml" />
+
+    <br>
+    <input type="submit" onclick="validateInpuData()" value="Submit" id="sbmt" /> <br>
   </form>
-
-  <script>
-    function test1() {
-      console.log(document.getElementById('uName'));
-    }
-  </script>
 </body>
-
 </html>
