@@ -4,52 +4,67 @@
 <head>
 
 </head>
-<style>
-
-</style>
-<script>
-  function validateInpuData() {
-    document.getElementById('uName').disabled = true;
-    document.getElementById('pwd').disabled = true;
-    document.getElementById('male').disabled = true;
-    document.getElementById('fMale').disabled = true;
-    document.getElementById('country').disabled = true;
-    document.getElementById('sbmt').disabled = true;
-
-    document.getElementById('fMale').checked = true;
-    document.getElementById('eng').checked = true;
-    document.getElementById('tel').checked = true;
-    document.getElementById('tml').checked = true;
-
-    document.getElementById('eng').disabled = true;
-    document.getElementById('tel').disabled = true;
-    document.getElementById('tml').disabled = true;
-  }
-
-</script>
 
 <body>
 
   <form action="#">
-    Enter user Name: <input type="text" id="uName" style="color: red;" value="Kamal" disabled="true"/> <br>
-    password : <input type="password" id="pwd" value="abc123" /> <br>
-    Gender : Male : <input type="radio" name="gender" id="male" />
-    Female : <input type="radio" name="gender" id="fMale" /><br>
-    Select Country:
+    Enter Name : <input type="text" id="userName" /><br>
+    Enter Password: <input type="password" id="pwd" /><br>
+    Select coubtry: <br>
     <select id="country">
       <option>Select</option>
-      <option>US</option>
-      <option selected="true">India</option>
       <option>Aus</option>
-    </select>
+      <optio>India</option>
+      <option>UK</option>
+    </select><br>
+    Gender: <br>
+    Male : <input type="radio" id="male" name="g" />
+    Female : <input type="radio" id="female" name="g" />
     <br>
-    Select languages:
-    English: <input type="checkbox" id="eng" />
+    Select Langualges:
+    English : <input type="checkbox" id="eng" />
     Telugu: <input type="checkbox" id="tel" />
     Tamil: <input type="checkbox" id="tml" />
-
     <br>
-    <input type="submit" onclick="validateInpuData()" value="Submit" id="sbmt" /> <br>
+    <input type="submit" value="Submit..." onclick="testFunction()" />
+    <input type="submit" value="Enable Form" onclick="enalbeElements()" />
+
   </form>
+
+  <script>
+
+    function testFunction() {
+
+      document.getElementById('userName').value = "Kamal";
+      document.getElementById('pwd').value = "ASASAS";
+
+      document.getElementById('male').checked = true;
+
+      document.getElementById('eng').checked = true;
+      document.getElementById('tel').checked = true;
+
+
+      document.getElementById('country').selectedIndex = 2;
+
+
+      var uName = document.getElementById("userName").value;
+      console.log(uName);
+
+      var passordV = document.getElementById('pwd').value;
+      console.log(passordV);
+
+      /*
+        int uName = "Kamal";
+        System.out.println(uName);
+      */
+
+    }
+    function enalbeElements() {
+
+    }
+
+  </script>
+
 </body>
+
 </html>
