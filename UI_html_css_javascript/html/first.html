@@ -8,14 +8,14 @@
 <body>
 
   <form action="#">
-    Enter Name : <input type="text" id="userName" /><br>
+    Enter Name : <input type="text" id="userName"/><br>
     Enter Password: <input type="password" id="pwd" /><br>
     Select coubtry: <br>
     <select id="country">
-      <option>Select</option>
-      <option>Aus</option>
-      <optio>India</option>
-      <option>UK</option>
+      <option value="slect">Select</option>
+      <option value="aus">Aus</option>
+      <option value="ind">India</option>
+      <option value="uk">UK</option>
     </select><br>
     Gender: <br>
     Male : <input type="radio" id="male" name="g" />
@@ -26,43 +26,42 @@
     Telugu: <input type="checkbox" id="tel" />
     Tamil: <input type="checkbox" id="tml" />
     <br>
-    <input type="submit" value="Submit..." onclick="testFunction()" />
-    <input type="submit" value="Enable Form" onclick="enalbeElements()" />
-
+    <input type="submit" value="Submit..." onclick="testFunction()" id="btn" />
+    <input type="submit" value="Enable Form..." onclick="enableForm()" id="btn" />
   </form>
+
+
+  <p id="pContent" hidden="true" style="background-color: greenyellow;">
+    Form Submitted successfull...!!!<br>
+    Please wait for 10 working Days to get mail.
+  </p>
+
+
+<div>
+    Use the Menu
+    We recommend reading this tutorial, in the sequence listed in the menu.
+    
+    If you have a large screen, the menu will always be present on the left.
+    
+    If you have a small screen, open the menu by clicking the top menu sign 
+</div>
+
 
   <script>
 
     function testFunction() {
-
-      document.getElementById('userName').value = "Kamal";
-      document.getElementById('pwd').value = "ASASAS";
-
-      document.getElementById('male').checked = true;
-
-      document.getElementById('eng').checked = true;
-      document.getElementById('tel').checked = true;
+   
+    var x = document.getElementById("country").selectedIndex;
+    console.log(x);
+    var y = document.getElementById("country").options;
+    console.log(y);
+    console.log("Index: " + y[x].index + " is " + y[x].text);
 
 
-      document.getElementById('country').selectedIndex = 2;
-
-
-      var uName = document.getElementById("userName").value;
-      console.log(uName);
-
-      var passordV = document.getElementById('pwd').value;
-      console.log(passordV);
-
-      /*
-        int uName = "Kamal";
-        System.out.println(uName);
-      */
-
-    }
-    function enalbeElements() {
 
     }
 
+ 
   </script>
 
 </body>
