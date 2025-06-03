@@ -8,26 +8,29 @@
 <body>
 
   <form action="#">
-    Enter Name : <input type="text" id="userName"/><br>
+    Enter Name : <input type="text" id="userName" /><br>
     Enter Password: <input type="password" id="pwd" /><br>
     Select coubtry: <br>
-    <select id="country">
+    <select id="country" onchange="showElements();">
       <option value="slect">Select</option>
-      <option value="aus">Aus</option>
-      <option value="ind">India</option>
-      <option value="uk">UK</option>
+      <option value="111">AUS</option>
+      <option value="222">INDIA</option>
+      <option value="333">UK</option>
     </select><br>
-    Gender: <br>
-    Male : <input type="radio" id="male" name="g" />
-    Female : <input type="radio" id="female" name="g" />
-    <br>
-    Select Langualges:
-    English : <input type="checkbox" id="eng" />
-    Telugu: <input type="checkbox" id="tel" />
-    Tamil: <input type="checkbox" id="tml" />
-    <br>
-    <input type="submit" value="Submit..." onclick="testFunction()" id="btn" />
-    <input type="submit" value="Enable Form..." onclick="enableForm()" id="btn" />
+    <div id="sec1">
+      Gender: <br>
+      Male : <input type="radio" id="male" name="g" />
+      Female : <input type="radio" id="female" name="g" />
+      <br>
+      Select Langualges:
+      English : <input type="checkbox" id="eng" />
+      Telugu: <input type="checkbox" id="tel" />
+      Tamil: <input type="checkbox" id="tml" />
+      <br>
+
+    </div>
+    <input type="submit"value="Submit..." onclick="submitFunction(); return false;" id="btn1" />
+    <input type="submit" disabled="true" value="Enable Form..." onclick="enableForm(); return false;" id="btn2" />
   </form>
 
 
@@ -35,33 +38,46 @@
     Form Submitted successfull...!!!<br>
     Please wait for 10 working Days to get mail.
   </p>
-
-
-<div>
-    Use the Menu
-    We recommend reading this tutorial, in the sequence listed in the menu.
-    
-    If you have a large screen, the menu will always be present on the left.
-    
-    If you have a small screen, open the menu by clicking the top menu sign 
-</div>
-
-
+  <div id="myDIV" style="color: green;">
+    Form submitted successfully..!!!<br>
+    100K+ creators trust Graphy to teach online
+    𝕏
+    Logiclabs Technologies 2025<br>
+    Privacy policy<br>
+    Terms of use<br>
+    Contact us<br>
+    Refund policy<br>
+  </div>
   <script>
+    function submitFunction() {
+      document.getElementById('myDIV').style.display = "block";
 
-    function testFunction() {
-   
-    var x = document.getElementById("country").selectedIndex;
-    console.log(x);
-    var y = document.getElementById("country").options;
-    console.log(y);
-    console.log("Index: " + y[x].index + " is " + y[x].text);
+   }
 
+    function enableForm() {
+      document.getElementById('myDIV').style.display = "none";
+    }
+
+    function showElements() {
+
+
+
+
+      var index = document.getElementById("country").selectedIndex;
+      var options = document.getElementById('country').options;
+      var finalValue = options[index].value;
+
+      if (finalValue == 222) {
+        document.getElementById('sec1').style.display = 'block';
+        document.getElementById('btn1').disabled = false;
+        document.getElementById('btn2').disabled = false;
+      } else {
+        alert("You are unautorized to submit form!!");
+      }
 
 
     }
 
- 
   </script>
 
 </body>
