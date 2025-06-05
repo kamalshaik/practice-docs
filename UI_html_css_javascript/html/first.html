@@ -5,83 +5,28 @@
 
 </head>
 
-<body style="background-color: yellow;">
+<body>
 
-  <form action="#">
-    Enter Name : <input type="text" id="userName" /><br>
-    Enter Password: <input type="password" id="pwd" /><br>
-    Select coubtry: <br>
-    <select id="country" onchange="showElements();">
-      <option value="slect">Select</option>
-      <option value="111">AUS</option>
-      <option value="222">INDIA</option>
-      <option value="333">UK</option>
-    </select><br>
-    <div id="sec1">
-      Gender: <br>
-      Male : <input type="radio" id="male" name="g" />
-      Female : <input type="radio" id="female" name="g" />
-      <br>
-      Select Langualges:
-      English : <input type="checkbox" id="eng" />
-      Telugu: <input type="checkbox" id="tel" />
-      Tamil: <input type="checkbox" id="tml" />
-      <br>
+  Enter name : <input type="text" id="nameId"/><br>
+  <button onclick="showContent();"> Click here</button>
 
-    </div>
-    <input type="submit"value="Submit..." onclick="submitFunction(); return false;" id="btn1" />
-    <input type="submit" disabled="true" value="Enable Form..." onclick="enableForm(); return false;" id="btn2" />
-  </form>
+  <div id="myDIV" style="color: red;">AAAAAAA</div>
 
-
-  <p id="pContent" hidden="true" style="background-color: greenyellow;">
-    Form Submitted successfull...!!!<br>
-    Please wait for 10 working Days to get mail.
-  </p>
-  <div id="myDIV" style="color: green;">
-    Form submitted successfully..!!!<br>
-    100K+ creators trust Graphy to teach online
-    𝕏
-    Logiclabs Technologies 2025<br>
-    Privacy policy<br>
-    Terms of use<br>
-    Contact us<br>
-    Refund policy<br>
-  </div>
-
-  <style>
-
-  </style>
-
-  
   <script>
-    function submitFunction() {
-      document.getElementById('myDIV').style.display = "block";
+    function showContent() {
+       document.getElementById('myDIV').innerHTML = new Date();   
+       document.getElementById('myDIV').style.color = 'blue';   
 
-   }
-
-    function enableForm() {
-      document.getElementById('myDIV').style.display = "none";
-    }
-
-    function showElements() {
-
-
-
-
-      var index = document.getElementById("country").selectedIndex;
-      var options = document.getElementById('country').options;
-      var finalValue = options[index].value;
-
-      if (finalValue == 222) {
-        document.getElementById('sec1').style.display = 'block';
-        document.getElementById('btn1').disabled = false;
-        document.getElementById('btn2').disabled = false;
-      } else {
-        alert("You are unautorized to submit form!!");
-      }
-
-
+       var nameValue = document.getElementById('nameId').value;
+       if(nameValue == ''){
+        alert('Please enter Name!');
+       }else{
+        console.log(nameValue);
+        
+       }
+       
+       
+       
     }
 
   </script>
