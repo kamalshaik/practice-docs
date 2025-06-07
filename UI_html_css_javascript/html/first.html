@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-
-</head>
-
 <body>
 
-  Enter name : <input type="text" id="nameId"/><br>
-  <button onclick="showContent();"> Click here</button>
+  <h2>What Can JavaScript Do?</h2>
 
-  <div id="myDIV" style="color: red;">AAAAAAA</div>
+  <p id="demo">JavaScript can change HTML content.</p>
 
+  <button type="button" onclick=myFunction();>Click Me!</button><br>
+  Enter text : <input type="text" id="mtInput" /><br>
+
+
+
+  <img src="pic_bulb_off.gif" id="imageId" />
+  <button type="button" onclick="bulbONFunction();" id="aaaa">Bulb ON</button><br>
+  <button type="button" onclick="bulbOFFFunction();">Bulb OFF</button><br>
+
+
+  <button type="button" onclick="father();">Father<br>
+    <button type="button" onclick="mother();">mother<br>
+      <button type="button" onclick="Me();">Me<br>
+        <button type="button" onclick="brother();">brother<br>
   <script>
-    function showContent() {
-       document.getElementById('myDIV').innerHTML = new Date();   
-       document.getElementById('myDIV').style.color = 'blue';   
-
-       var nameValue = document.getElementById('nameId').value;
-       if(nameValue == ''){
-        alert('Please enter Name!');
-       }else{
-        console.log(nameValue);
-        
-       }
-       
-       
-       
+    function myFunction() {
+       document.getElementById('demo').style = "background-color:red;font-size:100px";
+    }
+    function bulbONFunction() {
+      document.getElementById('imageId').src = 'pic_bulb_on.gif'
+    }
+    function bulbOFFFunction() {
+      document.getElementById('imageId').src = 'pic_bulb_off.gif'
     }
 
+    function father() {
+      document.getElementById('imageId').src = 'pic_bulb_off.gif'
+    }
   </script>
+
 
 </body>
 
