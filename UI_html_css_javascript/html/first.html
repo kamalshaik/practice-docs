@@ -2,21 +2,36 @@
 <html>
 
 <body>
-
-
+    <form>
+        Employee Name: <input type="text" id="empName" value="Kamal" /> <br>
+        Employee Id: <input type="text"  value="12" /> <br>
+        Employee Sal: <input type="text"  value="1234" /> <br>
+        Employee Address: <input type="text"  value="BVG" /> <br>
+        Employee Cell: <input type="text" value="9848" /> <br>
+    </form>
+    <input type="submit" name="Submit" onclick="submitViaFetch()" /> <br>
     <script>
+
+        function submitViaFetch() {
+            const employee = {
+                empName: document.getElementById("empName").value,
+                empId: 4554,
+                empSalary: 4545,
+                empAddress: "MVG",
+                empCell: 454
+            }
         
-        let name;
-        name = "Kamal";
-        // alert("my name is : " + name +" welcome to JS" + "asasasa");
-        alert(`My name is ${name} welcome to JS ASASAS`);
-        // String.format("asasasa%d sa %s s", 45,23,4545)
-        
-
-
-
+            fetch('http://localhost:9002/saveFullEmpDetailsFromJS', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(employee)
+            })
+                .then(response => response.text())
+                .then(result => console.log(result))
+                .catch(error => console.error('Error:', error));
+        }
     </script>
-
 </body>
-
 </html>
