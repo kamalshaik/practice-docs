@@ -7,15 +7,21 @@
 
 <body>
 
-
+  Enter First value: <input type="text" id="fValue"/> <br>
+  Enter Second value: <input type="text" id="sValue"/><br>
+  <button value="Submit" onclick="add()"> Submit </button>
 
   <script>
+    function add(){
 
-    let x = 'asasass "assass" ';
-    console.log(x);
+      let fValue = document.getElementById("fValue").value;
+      let sValue = document.getElementById("sValue").value;
+      console.log(parseInt(fValue) + parseInt(sValue));      
+    }
     
-    
+  
 
+  
 
 
 
